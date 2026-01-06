@@ -40,7 +40,8 @@ public class GenerateReportHandler implements RequestHandler<ScheduledEvent, Voi
     @Override
     public Void handleRequest(ScheduledEvent scheduledEvent, Context context) {
 
-        String lastWeek = Instant.now().minus(7, ChronoUnit.DAYS).toString();
+//        String lastWeek = Instant.now().minus(7, ChronoUnit.DAYS).toString();
+        String lastWeek = Instant.now().minus(1, ChronoUnit.HOURS).toString();
 
         ScanRequest scanRequest = ScanRequest.builder()
                 .tableName(tableName)
