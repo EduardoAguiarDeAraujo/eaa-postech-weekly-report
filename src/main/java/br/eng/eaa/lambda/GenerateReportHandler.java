@@ -45,7 +45,7 @@ public class GenerateReportHandler implements RequestHandler<ScheduledEvent, Voi
 
         ScanRequest scanRequest = ScanRequest.builder()
                 .tableName(tableName)
-                .filterExpression("data_envio > :lastWeek")
+                .filterExpression("dataEnvio > :lastWeek")
                 .expressionAttributeValues(Map.of(":lastWeek", AttributeValue.builder().s(lastWeek).build()))
                 .build();
 

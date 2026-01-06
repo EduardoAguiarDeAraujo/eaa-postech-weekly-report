@@ -12,7 +12,7 @@ public record FeedbackItem(String id, String descricao, int nota, String urgenci
                 item.get("descricao").s(),
                 Integer.parseInt(item.get("nota").n()),
                 item.get("urgencia").s(),
-                item.get("data_envio").s()
+                item.get("dataEnvio").s()
         );
     }
 }
